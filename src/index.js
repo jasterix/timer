@@ -1,14 +1,19 @@
 const title = document.getElementById("title");
 
 const timer = () => {
-  let interval = 60;
-  const timer = setInterval(() => {
-    title.innerHTML = "00:" + interval;
-    console.log(interval);
-    interval--;
-    if ((interval, 0)) {
-      clearInterval(timer);
-    }
-  }, 1000);
+  console.log("hi");
+  let interval = 5;
+  try {
+    const countdown = setInterval(() => {
+      title.innerHTML = "00:" + interval;
+      interval--;
+      if (interval < 0) {
+        title.innerText = "DONE";
+        clearInterval(countdown);
+      }
+    }, 1000);
+  } catch (error) {
+    console.log(error);
+  }
 };
-timer();
+// timer();
