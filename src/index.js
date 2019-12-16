@@ -3,13 +3,16 @@ const form = document.getElementById("form");
 // const btn = document.getElementById("btn");
 
 const timer = event => {
-  event.preventDefault();
+  const input = parseInt(event.target.parentNode.querySelector("input").value);
 
   console.log("hi");
-  let interval = 5;
+  console.log(event);
+  event.preventDefault();
+
+  let interval = input;
   let countdown = window.setInterval(() => {
     form.innerHTML = "";
-    time.innerText = "00:" + interval;
+    time.innerText = "0:" + interval;
     interval--;
     if (interval === 0) {
       time.innerText = "DONE";
