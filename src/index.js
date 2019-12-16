@@ -4,9 +4,6 @@ const form = document.getElementById("form");
 
 const timer = event => {
   const input = parseInt(event.target.parentNode.querySelector("input").value);
-
-  console.log("hi");
-  console.log(event);
   event.preventDefault();
 
   let interval = input;
